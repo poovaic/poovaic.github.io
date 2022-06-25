@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Game</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+    <!-- link for icons -->
+    
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> -->
+
+</head>
+<!-- body of the page -->
+<body class = "flex">
+
+    <!-- outer container -->
+<div class = "container"> 
+
+    <!-- quiz container -->
+
+
+    <div class = "quiz_container"> 
+        <!-- heading part of the game - contains title  -->
+        <div class = "heading"> 
+            <button type="button" id="start_game"><img src="https://images-na.ssl-images-amazon.com/images/I/71VpHPnLOjL.png" height ="80" width="80" /></button>
+
+            <h1 class="title">TRIVIA GAME</h1>
+            <!-- <button type="button" id="start_game">Start Game</button> -->
+            <!-- displays score box below the question -->
+
+            <div class = "score_question_box flex">
+                <h3>Score:</h3>
+                <span id = "score"></span>/<span id="total-questions">10</span>
+               
+            </div>
+            
+        </div>
+        <!-- body of the game. question and answers will be displayed -->
+            <div class="body">
+                <!-- <div id="quesdiv"></div> -->
+                <h2 class="question" id="ques"></h2>
+            
+                <ul class = "answer_options">
+                    <li> </li>
+                    <li></li>
+                
+                    <li></li>
+                    <li></li>
+                    
+
+                </ul>
+                <!-- This div will display the result -->
+                <div class ="result"></div>
+
+            </div>
+
+
+        <!-- The bottom part of the game which will have buttons to check answer and play again. -->
+        <div class = "bottom">
+            <button type="button" id="check_answer">GO!!!</button>
+            <button type = "button" id="play_again">GAME RESTART!!!</button>
+        </div>
+        </div>
+    
+</div>
+
+    <script  src="game.js" defer></script>  
+
+</body>
+</html>
