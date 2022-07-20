@@ -18,4 +18,9 @@ GAME FLOW:
         All 3 lifelines can be used only once.
 
 
+REFERENCES:
+https://gomakethings.com/using-array.map-to-create-markup-from-an-array-with-vanilla-js/
+
+
+
 

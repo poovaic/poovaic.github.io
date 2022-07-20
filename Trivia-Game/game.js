@@ -97,7 +97,6 @@ async function callAPI(){
 }
 
 
-
 //LOAD THE QUIZ - Called by callAPI().Loads the question,correct and wrong answers
 function loadQuiz(apiInput){ 
 questionNumber++;
@@ -111,29 +110,19 @@ console.log(correctAnswer)
 let wrongAnswer = apiInput.incorrect_answers;//wrong answer
 console.log(wrongAnswer)
 let answerList = wrongAnswer
-// const questionLoading = new Audio('./questionLoading.mp3');
-//       questionLoading.play();
 
-
-
-
-//inserts correct and wrong answer in ul:answer_otpions
-// tried putting this is a separate variable and mapping. but didnt work.
+//UNORDERED LIST:Creates list of options to be used in Unordered List
 answerList.splice((Math.random()*(wrongAnswer.length+1)),0,correctAnswer) //splice(select random index, replace 0 element, correctAnswer to the list)
-//console.log(answer)
 
 
-
-//DISPLAY question in #ques
+//DISPLAY question
 let questionPara = document.querySelector('#ques')
 questionPara.innerHTML = apiInput.question;
 
 //DISPLAY LIST OF OPTIONS UL .answer_options
-// reference:https://gomakethings.com/using-array.map-to-create-markup-from-an-array-with-vanilla-js/
-
 answer.innerHTML =`${answerList.map((option) =>
  `<li><span>`+option+`</span></li>`).join('')}`
- //`<li> ${i+1}.<span>${option}</span></li>`).join('')}`
+//`<li> ${i+1}.<span>${option}</span></li>`).join('')}`
 //interpolation helps to go through array and dynamically add it to li tags. 
 //console.log(answer)
 
@@ -171,19 +160,11 @@ fiftyFifty.addEventListener('click', function(){
 
 //LIFELINE 3 : AUDIENCE POLL
 audiencePoll.addEventListener('click', function(){
-    audiencePoll.disabled='true';
+    audiencePoll.disabled=true;
     audiencePoll.style.visibility = 'hidden';
     
     for(j=0;j<4;j++){
-        // if(decodeEntities(wrongAnswer[j]) !== decodeEntities(correctAnswer)){
-        //     result.style.backgroundColor = "orange"
-            
-        //     a = answer.querySelectorAll('li')[j].textContent + `= 55%`
-        //     result.style.visibility = 'visible';
-
-        //     result.innerHTML += `<p>${a}</p>`;
-        //     console.log(a)
-        // }
+        
         if(answer.querySelectorAll('li')[j].textContent == decodeEntities(correctAnswer)){
             result.style.backgroundColor = "green"
             
@@ -323,11 +304,12 @@ function restartGame(){
     startGame.style.display="none";
     winLose.textContent = '';
     result.textContent = '';
-    fiftyFifty.disabled='false';
+    fiftyFifty.disabled ='false';
     fiftyFifty.style.visibility = 'visible'
-    audiencePoll.disabled='false';
+    audiencePoll.disabled=false;
     audiencePoll.style.visibility = 'visible';
     skip.style.visibility = 'visible'
+    skip.disabled = 'false';
     
 
     //setCount();
