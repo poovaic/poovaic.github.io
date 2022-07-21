@@ -5,9 +5,8 @@ import Home from './screens/Home'
 import NoMatch from './screens/NoMatch';
 import MyFridge from './screens/MyFridge';
 import Recipe from './screens/Recipe';
-//import RecipeCard from './components/RecipeCard';
 import About from './screens/About';
-import Recipes from './screens/Recipes';
+//import Search from './components/Search';
 
 
 
@@ -16,18 +15,20 @@ function App() {
     <div className="App">
       <div className="links">
     <nav>
-            <NavLink to={"/"}>MyFridge</NavLink>
-            {/* <NavLink to={"/"}>Home</NavLink> */}
+            <NavLink to={"/MyFridge"}>My Fridge</NavLink>
             <NavLink to={"/about"}>About</NavLink>
             
           </nav>
       </div>
+      {/* <div className="search">
+      <Search/>
+      </div> */}
       <Routes>
-      <Route path="/" element={<MyFridge/>}/>
-        {/* <Route path="/" element={<Home/>}/> */}
+
+        <Route path="/MyFridge" element={<Home/>}/>
+        <Route path="/MyFridge/:recipes" element={<MyFridge/>}/>
         <Route path="/about" element={<About/>}/>
-        <Route path="/MyFridge/:recipes" element={<Recipes/>}/> 
-        <Route path="/MyFridge/:recipe_id" element={<Recipe/>}/> 
+        <Route path="/MyFridge/:recipes/:recipe_id" element={<Recipe/>}/> 
         <Route path="*" element={<NoMatch/>}/>
       </Routes>
 

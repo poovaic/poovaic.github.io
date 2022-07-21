@@ -11,7 +11,7 @@ const navigate = useNavigate();
             
             <div className="modal">
             <h3>{props.title}</h3>
-            <button onClick={()=>navigate(`/MyFridge/${props.id}`)}>Click for Recipe</button>
+            <button onClick={()=>navigate(`/MyFridge/${props.recipes}/${props.id}`)}>Click for Recipe</button>
             </div>
 
         </div>
