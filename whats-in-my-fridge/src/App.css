@@ -1,50 +1,116 @@
-.App {
-  text-align: center;
+*{
+  box-sizing:border-box;
+  margin:zero;
+  padding:0;
+
+}
+body{
+  /* background-color: rgb(226, 225, 225); */
+
+}
+.app{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items:center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* 
+.search-wrapper{
+
+  display:flex;
+  justify-content: center;
+  height:200px;
+  margin-top: 5%  /* background-image: url(./fridge.jpg);
+  background-size: 100% 100%; */
+/* } */
+.search {
+  margin-top: 75%;
+  height:100px;
+  padding-top: 20px;
+  justify-content: center;
+  border:3px solid grey;
+
+} 
+.input-text-box{
+  min-width:200px;
+  max-width:100vw;
+  font-size: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.myfridge{
+ display:flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ background-color: rgb(226, 225, 225);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+@media (min-width:320px)  {
+   /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ }
+@media (min-width:480px)  { 
+  /* smartphones, Android phones, landscape iPhone */ }
+@media (min-width:600px)  { 
+  /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
+@media (min-width:801px)  { 
+  /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media (min-width:1025px) { 
+  /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { 
+  /* hi-res laptops and desktops */ }
+
+.recipe-card{
+  display:flex;
   flex-direction: column;
   align-items: center;
+  max-width: 200px;
+  border-radius:4px;
+
+}
+
+.recipeimage{
+  border-radius: 1rem;
+  background-color: rgb(226, 225, 225);
+}
+.recipe-card-name{
+  text-align:center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+} 
+
+.recipe-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  width: 70%;
+  margin: 1em auto;
+  background: #eeeeee;
+}
+.recipe{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+.home{
+  background-image: url(./fridge.jpg);
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-top: 5%;
+  margin-right: auto;
+  min-width: 200px;
+  max-width: 500px;
+  min-height: 700px;
+position: relative;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-myfridge{
+  padding-bottom: 60px;
 }
-
-/* .no-match{
-
-} */
-
-/* .about{
-
-} */
-
-/* .api-call{
-
-} */
+.mapping{
+  display:flex;
+flex-wrap: wrap;}

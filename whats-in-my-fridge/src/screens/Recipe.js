@@ -16,9 +16,8 @@ function Recipe(){
     const [callIns,setCallIns]=useState([])
 
     async function callInstructions(id){
-        const API_KEY= 'c16f41449f124bb79348ad2f105fd2bb'
         
-        let instructionsResponse = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${API_KEY}`)
+        let instructionsResponse = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${process.env.REACT_APP_FRIDGE_API_KEY}`)
        console.log("initial api output",instructionsResponse)
         let output= instructionsResponse.data;
         console.log("api output",output)
@@ -32,18 +31,14 @@ function Recipe(){
 
    
     return(
-        <div>
-
+        <div className="recipe-container">
+            <div className="recipe">
             <img src={callIns.image} alt = "Post Banner" loading="lazy"/>
-            
-            <div>
-
             <h3>{callIns.title}</h3>
             {/* <p>{callIns.instructions}</p> */}
             <div dangerouslySetInnerHTML={{ __html: callIns.instructions }}></div>
-            <button onClick={()=>navigate(`/MyFridge`)}>Go Back</button>
+            <button onClick={()=>navigate(-1)}>Go Back</button>
             </div>
-
         </div>
     )
 }

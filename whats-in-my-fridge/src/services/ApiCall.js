@@ -2,8 +2,8 @@ import axios from "axios";
 
     export async function callRecipe(ingredients){
 
-const API_KEY ='484988b70b4542d3b945d6e3502e0430';
-        const response = await axios.get(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${API_KEY}&ingredients=${ingredients}&number=30`)
+
+        const response = await axios.get(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.REACT_APP_FRIDGE_API_KEY}&ingredients=${ingredients}&number=16`)
     
 
     return response

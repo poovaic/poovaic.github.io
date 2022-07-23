@@ -1,31 +1,49 @@
 import React from 'react';
 import './App.css';
-import {NavLink,Routes,Route} from 'react-router-dom';
+import {Link,NavLink,Routes,Route, Navigate} from 'react-router-dom';
 import Home from './screens/Home'
 import NoMatch from './screens/NoMatch';
 import MyFridge from './screens/MyFridge';
 import Recipe from './screens/Recipe';
 import About from './screens/About';
-//import Search from './components/Search';
+import {Toolbar,AppBar, Stack, Typography} from "@mui/material"
+import IconButton from "@mui/material/IconButton";
+import KitchenIcon from '@mui/icons-material/Kitchen';
+
 
 
 
 function App() {
+
   return (
+    
     <div className="App">
-      <div className="links">
-    <nav>
-            <NavLink to={"/MyFridge"}>My Fridge</NavLink>
-            <NavLink to={"/about"}>About</NavLink>
+      <AppBar position="static" style={{backgroundColor:"#adc9b2",color:"black"}}>
+        <Toolbar>
+          <IconButton>
+          <KitchenIcon />
+          </IconButton>
+          <Typography variant="h6" component="div" sx={{flexGrow:1}} >
+            What's in my Fridge?
+          </Typography>
+        <Stack style={{color:"black"}} direction="row" spacing={2}  >
+        <NavLink style={{color:"black",fontSize:"1.2rem",textDecoration:"none"}} to={"/"}>My Fridge</NavLink>
+        <NavLink style={{color:"black" ,fontSize:"1.2rem", textDecoration:"none"}} to={"/about"}>About</NavLink>
+        </Stack>
+        </Toolbar>
+        </AppBar>
             
-          </nav>
-      </div>
+        
+        
+            
+        
       {/* <div className="search">
       <Search/>
       </div> */}
       <Routes>
 
-        <Route path="/MyFridge" element={<Home/>}/>
+        <Route path="/" element={<Home/>}/>
+
         <Route path="/MyFridge/:recipes" element={<MyFridge/>}/>
         <Route path="/about" element={<About/>}/>
         <Route path="/MyFridge/:recipes/:recipe_id" element={<Recipe/>}/> 
