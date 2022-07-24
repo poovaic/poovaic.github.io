@@ -58,11 +58,11 @@ function Home(){
 // console.log("search",search)
 // console.log("input",input)
     return (<div>
+
       {/* <div className="trivia">
              <h2>Did you know? {call}</h2> 
              </div> */}
       <div className="home">
- {/* <h1>This is homepage</h1> */}
         <Search/>
         {/* <input className="input-text-box" value={search} placeholder="ingredient1,ingredient2,..." type="text" onChange={(e)=>setSearch(e.target.value)}></input>
         <button onClick={()=>onClick()}>Search</button> 

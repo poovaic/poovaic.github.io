@@ -16,7 +16,7 @@ console.log("api data to be mapped",mapping)
 return(
         <div className="map">
             {/* creating a recipe card.sending data as props */}
-           {mapping !== [] && mapping.map ((item)=>{
+           {mapping!== [] && mapping.map ((item)=>{
         return <RecipeCard
         key={item.id}
         id={item.id}

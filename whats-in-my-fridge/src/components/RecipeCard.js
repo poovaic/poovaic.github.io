@@ -7,11 +7,11 @@ const navigate = useNavigate();
 
     return(
         <div className="recipe-card" key={props.id}>
-                        <h3>{props.title}</h3>
+                        <h3 className="recipe-card-name">{props.title}</h3>
 
             <img className="recipeimage"src={props.image} alt="Post banner"/>
             
-            <div className="modal">
+            <div className="recipe-card-button">
             <button onClick={()=>navigate(`/MyFridge/${props.recipes}/${props.id}`)}>Click for Recipe</button>
             </div>
 
