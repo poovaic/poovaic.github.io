@@ -32,12 +32,7 @@ function App() {
         </Stack>
         </Toolbar>
         </AppBar>
-            
-        
-        
-            
-        
-      {/* <div className="search">
+   {/* <div className="search">
       <Search/>
       </div> */}
       <Routes>
