@@ -110,7 +110,9 @@ body{
 }
 .mapping{
 display:flex;
-flex-wrap: wrap;}
+flex-wrap: wrap;
+}
+
 .about {
   display: flex;
   justify-content: center;

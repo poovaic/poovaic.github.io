@@ -57,7 +57,8 @@ console.log("callIns",callIns.extendedIngredients)
             </ul>
             )}
             {activeTab==='instructions' && (
-                <div className="instructions" dangerouslySetInnerHTML={{ __html: callIns.instructions }}></div>
+                callIns.instructions !== null? 
+                <div className="instructions" dangerouslySetInnerHTML={{ __html: callIns.instructions }}></div> : <h2>Sorry!No instructions found!</h2>
             )}
            
             
