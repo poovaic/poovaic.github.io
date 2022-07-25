@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+What’s in my fridge?
+July 18, 2022
+App Overview
+		Everyone who cooks looks inside their fridge to find out what they can cook with the available ingredients in their fridge. “What’s in my Fridge?”  App will do just that. When a user enters the ingredients that they have on hand, the app will find out recipes that they can click and access. It will focus on recipes which  mainly use the user’s ingredients. It will have a home page, about page, page to search for recipes and an error page.As stretch goals, I hope to add random food jokes/gifs to it too. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+API
+Spoonacular API 
 
-In the project directory, you can run:
+API LINK:
+https://api.spoonacular.com/recipes/findByIngredients 
 
-### `npm start`
+WIREFRAME
+1.Desktop
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2.Tablet
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+​​
+3.Mobile
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+COMPONENT HIERARCHY
 
-### Advanced Configuration
+MVP
+		The App should have the following pages:
+Home - Welcome message 
+About - Description of the App and instructions on how to use
+My Fridge - Search for Recipes, display recipe thumbnails
+Recipe - Will showcase the recipe the user clicked
+Error(Incase of page not found)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Post-MVP
+	Post MVP, additional widgets which give nutritional information on the food and display random food trivia can be added to it.
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+SWOT ANALYSIS
+//Add more Details
+STRENGTHS - Idea, Design
+WEAKNESS - Props,API Endpoints,Logic
+OPPORTUNITIES - Widgets to show how a food might taste, meal plan, grocery list generator
+THREATS - Using multiple API’s? Efficiently using API to produce end result
+	At this point of the project, I have to ensure the API endpoints are efficiently utilized for the App. As the App develops, I will decide if I need to use other API’s to produce nutritional information.

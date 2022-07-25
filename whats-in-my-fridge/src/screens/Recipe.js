@@ -39,7 +39,7 @@ console.log("callIns",callIns.extendedIngredients)
         <div className="recipe-container">
             
             <div className="recipe">
-            <img src={callIns.image} alt = "Post Banner" loading="lazy"/>
+            <img className="recipe-image" src={callIns.image} alt = "Post Banner" loading="lazy"/>
             <h2>{callIns.title}</h2>
             
             <div className="buttons-ins">

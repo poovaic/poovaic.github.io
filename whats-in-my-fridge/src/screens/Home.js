@@ -57,7 +57,8 @@ function Home(){
 
 // console.log("search",search)
 // console.log("input",input)
-    return (<div>
+    return (
+    <div className="home-bg">
 
       {/* <div className="trivia">
              <h2>Did you know? {call}</h2> 

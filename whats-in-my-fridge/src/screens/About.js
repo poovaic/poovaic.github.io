@@ -3,10 +3,11 @@ function About(){
 
     return(
         <div className="about">
-        <h1>Welcome to What's in my Fridge</h1>
-        <h2>Wondering what to cook with ingredients you have?  
-        </h2>
-        <h3> Enter your ingredients separated by a comma in the search bar and get a list of recipes that you can make!!!</h3>
+            <div className="text">
+        <h1>Welcome!!! Wondering what to cook with ingredients you have?  
+        </h1>
+        <h2> Enter your ingredients separated by a comma in the search bar and get a list of recipes that you can make!!!</h2>
+        </div>
         </div>
 
     )
